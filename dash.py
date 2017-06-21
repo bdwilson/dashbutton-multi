@@ -12,6 +12,8 @@ import requests
 import pcapy
 import time
 
+# if you feel like 60 seconds is too long to wait to re-run a command, then you
+# go ahead and change this.
 PKT_TIME_DIFF = 60
 
 # Assuming you have OpenDash installed and want to use SmartThings, set these
