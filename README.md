@@ -20,7 +20,7 @@ Assuming you want to do SmartThings, install OpenDash, add the devices you want
 to use, then query your new OpenDash installation and to get your device ids to
 do stuff against.
 
-<code> 
+<pre> 
 $ curl https://graph.api.smartthings.com:443/api/smartapps/installations/00ac0059-935c-48e8-8973-xxxxxxxx/devices?access_token=xxxxxxxxxxxxxxxxxxxx
     {
         "id": "e75a3ef6-7a79-4ef5-993b-xxxxxxxxxxxxx",
@@ -37,7 +37,7 @@ $ curl https://graph.api.smartthings.com:443/api/smartapps/installations/00ac005
         "name": "Honeywell TCC 8000/9000 Thermostat",
         "displayName": "UPSTAIRS"
     }
-</code>
+</pre>
 
 You get the idea.  Otherwise, if you're calling IFTTT URL's or running
 commands, you should be able to do that pretty easy. 
