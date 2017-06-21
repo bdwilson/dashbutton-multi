@@ -1,4 +1,4 @@
-Amazon Search
+Dash Button Multi-Tool
 =======
 <br>
 This script allows you to listen for ARP requests for older Dash buttons and do
