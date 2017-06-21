@@ -22,8 +22,7 @@ install_id = "00ac0059-935c-48e8-8973-xxxxxxxxxx"
 access_token = "9fa8b962-2034-4ecb-b99d-xxxxxxxxxx"
 
 def methodA():
-	# yep, this script triggers find my wife's iphone.. sigh. 
-	# https://github.com/albeebe/PHP-FindMyiPhone
+	# yep, this script triggers find my wife's iphone.. sigh.  https://github.com/albeebe/PHP-FindMyiPhone
 	print "iPhone"
 	os.system("php /home/pi/find-my-iphone/send-message.php")
 
@@ -32,16 +31,15 @@ def methodB():
 	print "Temp Down"
 	device_id = "88bc9887-aeac-488b-9259-xxxxxxxxx"
 	requests.get("https://graph.api.smartthings.com:443/api/smartapps/installations/" + install_id + "/devices/" + device_id + "/setCoolingSetpoint/71?access_token=" + access_token)
-	# it also calls IFTTT maker applet to resume schedule in 2 hours. I'd use
-	# IFTTT soley for this method, but since it takes 15 minutes to kick in, I
-	# need to set the temp using ST, then have IFTTT have it resume schedule
-	# because resume schedule isn't implemented in ST... IoT what a time to be
-	# alive! 
+	# it also calls IFTTT maker applet to resume schedule in 2 hours. I'd use IFTTT soley for this method, but since it takes 15 minutes to kick in, I
+	# need to set the temp using ST, then have IFTTT have it resume schedule because resume schedule isn't implemented in ST... 
+	#
+	# IoT what a time to be alive! 
+	# 
 	requests.post("https://maker.ifttt.com/trigger/temp_button_pressed/with/key/b6jmx28KCIglkcwxxxxxxxxx")
 
 def methodC():
-	# Toggle my ropelights to set the mood. Toggle setting in OpenDash is nice.
-	# If it was on, it turns off, vice versa. 
+	# Toggle my ropelights to set the mood. Toggle setting in OpenDash is nice. If it was on, it turns off, vice versa. 
 	print "Ropelights"
 	device_id = "e75a3ef6-7a79-4ef5-993b-xxxxxxx"
 	requests.get("https://graph.api.smartthings.com:443/api/smartapps/installations/" + install_id + "/devices/" + device_id + "/toggle?access_token=" + access_token)
